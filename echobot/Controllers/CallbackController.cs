@@ -18,7 +18,8 @@ namespace echobot.Controllers
             __vkApp = vkApp;
             __vkGroup = vkGroup;
         }
-
+    
+        [HttpPost]
         public IActionResult Callback([FromBody] sniff.CallbackRequest request)
         {
             string responseText = "ok";
@@ -30,7 +31,7 @@ namespace echobot.Controllers
                     responseText = Auth.CallbackConfirmation;
                     break;
                 case "message_new":
-                    MessageHandler.HandleNewMessage(request.Object as sniff.ObjectMessage, __vkGroup);
+                    MessageHandler.HandleNewMessage(request.Object, __vkGroup);
                     break;
             }
             

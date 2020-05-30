@@ -12,14 +12,13 @@ namespace sniff
         [JsonPropertyName("secret")]
         public string Secret { get; set; }
         [JsonPropertyName("object")]
-        public object Object { get; set; }
+        public Object Object { get; set; }
     }
-    
-    public class ObjectMessage
+
+    public class Object
     {
         [JsonPropertyName("message")]
         public Message Message { get; set; }
-
         [JsonPropertyName("client_info")]
         public ClientInfo ClientInfo { get; set; }
     }
