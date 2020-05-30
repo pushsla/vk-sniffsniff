@@ -24,7 +24,7 @@ namespace echobot.Controllers
             var webClient = new WebClient();
 
             string jsonresponse = webClient.DownloadString(
-                $"https://oauth.vk.com/access_token?client_id={Auth.AppId}&client_secret={Auth.AppSecurityKey}&redirect_uri={__config["Config:AdminTokenUri"]}&code={code}");
+                $"https://oauth.vk.com/access_token?client_id={Auth.AppId}&client_secret={Auth.AppSecurityKey}&redirect_uri={__config["Config:Registration:AdminTokenUri"]}&code={code}");
             var response = JsonSerializer.Deserialize<sniff.VkAuthPost>(jsonresponse);
             Auth.AdminToken = response.AccessToken;
 

@@ -1,6 +1,8 @@
+using System;
 using echobot.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using VkNet.Model.RequestParams;
 
 namespace echobot.Controllers
 {
@@ -17,6 +19,14 @@ namespace echobot.Controllers
             __config = config;
             __vkApp = vkApp;
             __vkGroup = vkGroup;
+
+            __vkGroup.Messages.SendStickerAsync(new MessagesSendStickerParams
+            {
+                Domain = __config["Config:Registration:GroupDomain"],
+                PeerId = long.Parse(__config["Config:Administration:GodId"]),
+                RandomId = new DateTime().Millisecond,
+                StickerId = 17616
+            });
         }
     
         [HttpPost]
