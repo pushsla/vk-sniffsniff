@@ -10,5 +10,7 @@ namespace sniff
         public ulong ExpiresInt { get; set; }
         [JsonPropertyName("user_id")]
         public long UserId { get; set; }
+        [JsonPropertyName("email")]
+        public string Email { get; set; }
     }
 }
