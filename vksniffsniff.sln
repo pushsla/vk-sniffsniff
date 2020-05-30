@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "echobot", "echobot\echobot.csproj", "{8AA9B8B8-4713-4DDB-8497-8DA0476883D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sniff", "sniff\sniff.csproj", "{914BBA29-263A-4519-BF62-425DE057DE60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AA9B8B8-4713-4DDB-8497-8DA0476883D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA9B8B8-4713-4DDB-8497-8DA0476883D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA9B8B8-4713-4DDB-8497-8DA0476883D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA9B8B8-4713-4DDB-8497-8DA0476883D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{914BBA29-263A-4519-BF62-425DE057DE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914BBA29-263A-4519-BF62-425DE057DE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914BBA29-263A-4519-BF62-425DE057DE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914BBA29-263A-4519-BF62-425DE057DE60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
