@@ -3,19 +3,18 @@ using VkNet.Model.Attachments;
 
 namespace sniff
 {
-    public class CallbackRequestBase
+    public class CallbackRequest
     {
         [JsonPropertyName(("type"))]
         public string Type { get; set; }
         [JsonPropertyName("group_id")]
         public string GroupId { get; set; }
-    }
-
-    public class CallbackMessage : CallbackRequestBase
-    {
+        [JsonPropertyName("secret")]
+        public string Secret { get; set; }
         [JsonPropertyName("object")]
-        public ObjectMessage Object { get; set; }
+        public object Object { get; set; }
     }
+    
     public class ObjectMessage
     {
         [JsonPropertyName("message")]

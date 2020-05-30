@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using VkNet.Model;
 
 namespace echobot
 {
@@ -26,6 +27,16 @@ namespace echobot
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<sniff.IVkApiGroup>(sp => {
+                var api = new sniff.VkApiGroup();
+                api.Authorize(new ApiAuthParams{ AccessToken = Auth.CallbackGroupToken});
+                return api;
+            });
+            services.AddSingleton<sniff.IVkApiApp>(sp => {
+                var api = new sniff.VkApiApp();
+                api.Authorize(new ApiAuthParams{ AccessToken = Auth.AdminToken});
+                return api;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -8,12 +8,15 @@ namespace echobot.Controllers
     public class AuthappController : ControllerBase
     {
         [HttpGet]
-        public IActionResult Authapp(string id, string secure)
+        public IActionResult Authapp(string id, string secure, string confirmation, string? secret, string token)
         {
             Auth.AppId = id;
             Auth.AppSecurityKey = secure;
+            Auth.CallbackConfirmation = confirmation;
+            Auth.CallbackSecret = secret;
+            Auth.CallbackGroupToken = token;
             
-            Console.WriteLine("::==>:: AppID set");
+            Console.WriteLine("::==>:: Authentication set");
             return Ok("ok");
         }
     }
