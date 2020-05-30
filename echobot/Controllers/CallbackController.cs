@@ -20,12 +20,13 @@ namespace echobot.Controllers
             __vkApp = vkApp;
             __vkGroup = vkGroup;
 
+            // FIXME does not send sticker on start!
             __vkGroup.Messages.SendStickerAsync(new MessagesSendStickerParams
             {
                 Domain = __config["Config:Registration:GroupDomain"],
                 PeerId = long.Parse(__config["Config:Administration:GodId"]),
                 RandomId = new DateTime().Millisecond,
-                StickerId = 17616
+                StickerId = 63
             });
         }
     
