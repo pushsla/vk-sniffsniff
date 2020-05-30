@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 
 namespace echobot.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class CallbackController : ControllerBase
     {
         private readonly IConfiguration __config;
