@@ -27,12 +27,12 @@ namespace echobot
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<sniff.IVkApiGroup>(sp => {
+            services.AddScoped<sniff.IVkApiGroup>(sp => {
                 var api = new sniff.VkApiGroup();
                 api.Authorize(new ApiAuthParams{ AccessToken = Auth.CallbackGroupToken});
                 return api;
             });
-            services.AddSingleton<sniff.IVkApiApp>(sp => {
+            services.AddScoped<sniff.IVkApiApp>(sp => {
                 var api = new sniff.VkApiApp();
                 api.Authorize(new ApiAuthParams{ AccessToken = Auth.AdminToken});
                 return api;
