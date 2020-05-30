@@ -8,7 +8,7 @@ namespace sniff
         [JsonPropertyName(("type"))]
         public string Type { get; set; }
         [JsonPropertyName("group_id")]
-        public string GroupId { get; set; }
+        public ulong GroupId { get; set; }
         [JsonPropertyName("secret")]
         public string Secret { get; set; }
         [JsonPropertyName("object")]
