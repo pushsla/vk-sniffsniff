@@ -1,0 +1,104 @@
+{
+    "type": "message_new",
+    "object": {
+        "message": {
+            "date": 1590874890,
+            "from_id": 181816944,
+            "id": 235,
+            "out": 0,
+            "peer_id": 181816944,
+            "text": "",
+            "conversation_message_id": 155,
+            "fwd_messages": [],
+            "important": false,
+            "random_id": 0,
+            "attachments": [
+                {
+                    "type": "photo",
+                    "photo": {
+                        "album_id": -7,
+                        "date": 1554141623,
+                        "id": 456239537,
+                        "owner_id": 181816944,
+                        "has_tags": false,
+                        "access_key": "4bba2815b6fb640430",
+                        "sizes": [
+                            {
+                                "height": 73,
+                                "url": "https://sun9-11.userapi.com/c850136/v850136386/1181e2/LVDuo3V7ORk.jpg",
+                                "type": "m",
+                                "width": 130
+                            },
+                            {
+                                "height": 87,
+                                "url": "https://sun9-18.userapi.com/c850136/v850136386/1181e7/eFtZd8Tyl9k.jpg",
+                                "type": "o",
+                                "width": 130
+                            },
+                            {
+                                "height": 133,
+                                "url": "https://sun9-62.userapi.com/c850136/v850136386/1181e8/3GN-nWGbl4Y.jpg",
+                                "type": "p",
+                                "width": 200
+                            },
+                            {
+                                "height": 213,
+                                "url": "https://sun9-6.userapi.com/c850136/v850136386/1181e9/mCdPIRHlJ-A.jpg",
+                                "type": "q",
+                                "width": 320
+                            },
+                            {
+                                "height": 340,
+                                "url": "https://sun9-49.userapi.com/c850136/v850136386/1181ea/h63h3B_OIjE.jpg",
+                                "type": "r",
+                                "width": 510
+                            },
+                            {
+                                "height": 42,
+                                "url": "https://sun9-63.userapi.com/c850136/v850136386/1181e1/hVbNii-WkL0.jpg",
+                                "type": "s",
+                                "width": 75
+                            },
+                            {
+                                "height": 1440,
+                                "url": "https://sun9-37.userapi.com/c850136/v850136386/1181e6/jipPlJ5LK7g.jpg",
+                                "type": "w",
+                                "width": 2560
+                            },
+                            {
+                                "height": 340,
+                                "url": "https://sun9-29.userapi.com/c850136/v850136386/1181e3/Sk1d2uvG5js.jpg",
+                                "type": "x",
+                                "width": 604
+                            },
+                            {
+                                "height": 454,
+                                "url": "https://sun9-3.userapi.com/c850136/v850136386/1181e4/D9Pf6AjgArc.jpg",
+                                "type": "y",
+                                "width": 807
+                            },
+                            {
+                                "height": 720,
+                                "url": "https://sun9-37.userapi.com/c850136/v850136386/1181e5/jZKXG0PkD3Q.jpg",
+                                "type": "z",
+                                "width": 1280
+                            }
+                        ],
+                        "text": ""
+                    }
+                }
+            ],
+            "is_hidden": false
+        },
+        "client_info": {
+            "button_actions": [
+                "text"
+            ],
+            "keyboard": true,
+            "lang_id": 0
+        }
+    },
+    "group_id": 195834293,
+    "event_id": "8e3a759dcabdf6927a971368fa7017d4f439fe89",
+    "secret": "CFJh2jL578hnhgf3v434jkG23BjhlnBoi7byutboijhGBBKjig"
+}

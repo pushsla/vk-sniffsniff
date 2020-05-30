@@ -16,13 +16,25 @@ namespace sniff.DTO
         
     }
 
+    public class VkAttachmentDataSticker
+    {
+        [JsonPropertyName("product_id")]
+        public long ProductId { get; set; }
+        
+        [JsonPropertyName("sticker_id")]
+        public long StickerId { get; set; }
+        
+        [JsonPropertyName("images")]
+        public VkAttachmentDataImage[] Images { get; set; }
+    }
+
     public class VkAttachmentDataPhoto : VkAttachmentDataBase
     {
         [JsonPropertyName("album_id")]
         public long AlbumId { get; set; }
         
         [JsonPropertyName("has_tags")]
-        public long HasTags { get; set; }
+        public bool HasTags { get; set; }
         
         [JsonPropertyName("lat")]
         public double Latitude { get; set; }
@@ -34,7 +46,7 @@ namespace sniff.DTO
         public long PostId { get; set; }
         
         [JsonPropertyName("sizes")]
-        public VkAttachmentDataSizes[] Sizes { get; set; }
+        public VkAttachmentDataImage[] Sizes { get; set; }
     }
 
     public class VkAttachmentDataDoc : VkAttachmentDataBase

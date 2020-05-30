@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace sniff.DTO
 {
-    public class VkAttachmentDataSizes
+    public class VkAttachmentDataImage
     {
         [JsonPropertyName("height")]
         public ulong Height { get; set; }
