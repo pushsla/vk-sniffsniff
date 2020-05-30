@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using sniff.DTO;
 using VkNet.Abstractions;
 using VkNet.Enums.SafetyEnums;
 using VkNet.Model.RequestParams;
@@ -8,7 +9,7 @@ namespace echobot.Handlers
 {
     public static class MessageHandler
     {
-        public static void HandleNewMessage(sniff.Object objectMessage, IVkApi vkApi)
+        public static void HandleNewMessage(VkObject objectMessage, IVkApi vkApi)
         {
             vkApi.Messages.SetActivity(vkApi.UserId.ToString(), MessageActivityType.Typing, objectMessage.Message.PeerId);
             Thread.Sleep(1000);

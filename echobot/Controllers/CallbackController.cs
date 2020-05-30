@@ -2,6 +2,7 @@ using System;
 using echobot.Handlers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using sniff.DTO;
 using VkNet.Model.RequestParams;
 
 namespace echobot.Controllers
@@ -31,10 +32,10 @@ namespace echobot.Controllers
         }
     
         [HttpPost]
-        public IActionResult Callback([FromBody] sniff.CallbackRequest request)
+        public IActionResult Callback([FromBody] VkCallback request)
         {
             string responseText = "ok";
-            
+
             if (request.Secret != Auth.CallbackSecret) return NotFound();
             switch (request.Type)
             {

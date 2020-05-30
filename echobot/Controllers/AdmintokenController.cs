@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using sniff.DTO;
 
 namespace echobot.Controllers
 {
@@ -25,7 +26,7 @@ namespace echobot.Controllers
 
             string jsonresponse = webClient.DownloadString(
                 $"https://oauth.vk.com/access_token?client_id={Auth.AppId}&client_secret={Auth.AppSecurityKey}&redirect_uri={__config["Config:Registration:AdminTokenUri"]}&code={code}");
-            var response = JsonSerializer.Deserialize<sniff.VkAuthPost>(jsonresponse);
+            var response = JsonSerializer.Deserialize<VkAuth>(jsonresponse);
             Auth.AdminToken = response.AccessToken;
 
             Console.WriteLine("::==>:: App authorized");

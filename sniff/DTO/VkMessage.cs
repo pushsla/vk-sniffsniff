@@ -1,38 +1,8 @@
 using System.Text.Json.Serialization;
-using VkNet.Model.Attachments;
 
-namespace sniff
+namespace sniff.DTO
 {
-    public class CallbackRequest
-    {
-        [JsonPropertyName(("type"))]
-        public string Type { get; set; }
-        [JsonPropertyName("group_id")]
-        public ulong GroupId { get; set; }
-        [JsonPropertyName("secret")]
-        public string Secret { get; set; }
-        [JsonPropertyName("object")]
-        public Object Object { get; set; }
-    }
-
-    public class Object
-    {
-        [JsonPropertyName("message")]
-        public Message Message { get; set; }
-        [JsonPropertyName("client_info")]
-        public ClientInfo ClientInfo { get; set; }
-    }
-    public class ClientInfo{
-    [JsonPropertyName("button_actions")]
-    public string[] ButtonActions { get; set; }
-
-    [JsonPropertyName("keyboard")]
-    public bool Keyboard { get; set; }
-
-    [JsonPropertyName("lang_id")]
-    public long LangId { get; set; }
-    }
-    public class Message
+    public class VkMessage
     {
         [JsonPropertyName("date")]
         public long Date { get; set; }
@@ -65,10 +35,9 @@ namespace sniff
         public long RandomId { get; set; }
 
         [JsonPropertyName("attachments")]
-        public Attachment[] Attachments { get; set; }
+        public VkAttachment[] Attachments { get; set; }
 
         [JsonPropertyName("is_hidden")]
         public bool IsHidden { get; set; }
     }
-    
 }

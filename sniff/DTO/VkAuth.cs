@@ -1,8 +1,8 @@
 using System.Text.Json.Serialization;
 
-namespace sniff
+namespace sniff.DTO
 {
-    public class VkAuthPost
+    public class VkAuth
     {
         [JsonPropertyName("access_token")]
         public string AccessToken { get; set; }
