@@ -4,8 +4,10 @@ namespace echobot
 {
     internal static class Auth
     {
+        public static Random Random = new Random();
         public const string Dumpfile = "Auth.dump";
-        public static ulong Epoch = 0;
+        
+        public static long Epoch = Random.Next();
         public static string AdminToken { get; set; }
         public static string AppSecurityKey { get; set; }
         public static string AppId { get; set; }
@@ -23,7 +25,7 @@ namespace echobot
         private string __callbackConfirmation;
         private string __callbackSecret;
         private string __callbackGroupToken;
-        private ulong __epoch;
+        private long __epoch;
 
         public AuthTransfer()
         {
@@ -38,8 +40,9 @@ namespace echobot
 
         public void SetAuth()
         {
-            __epoch++;
+            __epoch = Auth.Random.Next();
             Auth.Epoch = __epoch;
+            
             Auth.AdminToken = __adminToken;
             Auth.AppSecurityKey = __appSecurityKey;
             Auth.AppId = __appId;

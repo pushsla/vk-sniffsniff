@@ -12,5 +12,7 @@ namespace sniff.DTO
         public long UserId { get; set; }
         [JsonPropertyName("email")]
         public string Email { get; set; }
+        [JsonPropertyName("error")]
+        public string Error { get; set; }
     }
 }
