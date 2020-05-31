@@ -5,7 +5,7 @@ namespace echobot.Controllers
 {
     [ApiController]
     [Route("control/[controller]")]
-    public class GetEpochController : Controller
+    public class GetEpochController : ControllerBase
     {
         [HttpGet]
         public IActionResult GetEpoch()

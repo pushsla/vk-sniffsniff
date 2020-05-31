@@ -6,7 +6,7 @@ namespace echobot.Controllers
 {
     [ApiController]
     [Route("control/[controller]")]
-    public class SaveAuthController : Controller
+    public class SaveAuthController : ControllerBase
     {
         [HttpGet]
         public IActionResult SaveAuth(long epoch)
