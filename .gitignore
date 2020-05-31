@@ -1,5 +1,6 @@
 bin
 obj
+Auth.dump
 
 .idea
 .ccls-cache
